@@ -1,0 +1,57 @@
+1)
+(a) A processor is a collection of cores. Cores help in parallel execution. 
+(b) 8 processors. 
+		Command used = cat /proc/cpuinfo | grep processor
+(c) 4 core. 
+		Command used = cat /proc/cpuinfo | grep cores
+(d) 1.80 GHz 
+		Command used = cat /proc/cpuinfo
+(e) 16105764 kB 
+		Command used = cat /proc/meminfo | grep MemTotal
+(f) 4675468 kB 
+		Command used = cat /proc/meminfo | grep MemFree
+(g) 45494 
+		Command used = cat /proc/stat | grep processes
+(h) 101472903 
+		Command used = cat /proc/stat | grep ctxt
+
+2)
+(a) PID = 45993
+		Command used = top
+(b) CPU = 100%; MEM = 0%
+		Command used = top
+(c) Running state (R)
+		Command used = top
+
+3)
+(a) PID = 94979 
+		Command used = ps -u legolas 
+		'legolas' is my username :)
+(b) 95080 <-- 94545 <-- 94535 <-- 1107 <-- 1 <-- 0
+		Command used = ps -o ppid= -p <pid>
+		PID of process different than that in 3(a) because I terminated 3(a) and ran ./cpu-print again
+(c) stdin, stderr are pointing to /dev/pts. This is the pseudo terminal slave which 	corresponds to the terminal screen. stout is pointing to our redirected file.
+	Redirection is implemented by closing the fd(1), which corresponds to the stdout, and opening a new fd, corresponding to tmp.txt and assigning that to fd(1)
+		Command: ls -la /proc/[pid]/fd
+(d)	now, for the ./cpu-print process, the stout ((fd(1))) is pipe:[483995], while 	 	for the grep process, stdin (fd(0)) is pipe:[483995]. 
+	Pipe is implemented by the os by creating an intermediate pipe, whos first value is the read-fd and the second value is the write-fd. These two ends are connected to the child's stdin and parent's stdout respectively. 
+	Command: ls -la /proc/[pid]/fd
+(e) Out of history, cd, ls, ps
+	Built in executables: ls, ps
+	Implemented by bash: cd, history
+		Command used = type
+		{or help or whereis}
+
+
+4)
+(a) Memory1.c uses 6276 Kilo Bytes VSZ; 584 Kilo Bytes RSS
+	Memory2.c uses 6272 Kilo Bytes VSZ; 3208 Kilo Bytes RSS
+	In memory1, the array was simply initialised, but the values were not assigned. On contrary, memory2 assigned actual values to the array. Since both codes demanded memory for the same sized array, the os created an illusion for both of them that they have the memory available. But since only one of them used this memory, the os allocated memory physically only to memory2 and not memory1
+		Command Used = ps aux | grep memory
+
+5)
+(a) disk1.c has a disk utilisation of around 200 KB_read per second
+	disk.c has a disk utilisation of around 523998.00 KB_read per second which decreases gradually
+	The reason for this is since disk1.c is reading from the same file continuosly, hence the system can use the buffer and does not read to open the file again and again. On the other hand, disk.c is reading randomly from different files, and hence it has a initial spike in the disk utilisation. But it decreases gradually since all these pdfs that are read get cached, and the next time they are to be opened, disk utilisation does not increase.
+		Command used = sudo sysctl -w vm.drop_caches=3  [to drop cache]
+						iostat 1 20  [to observe the disk utilisation]
