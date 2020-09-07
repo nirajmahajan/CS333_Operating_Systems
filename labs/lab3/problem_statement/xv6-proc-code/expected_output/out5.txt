@@ -1,0 +1,13 @@
+Priority of parent process = 1000
+All children completed
+Child 0.    pid 9
+Child 1.    pid 10
+Child 2.    pid 11
+Child 3.    pid 12
+Child 4.    pid 13
+Exit order 
+pid 13
+pid 12
+pid 11
+pid 10
+pid 9
