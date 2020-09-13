@@ -1983,7 +1983,7 @@ Testcase: 35 525 4318 517 2356
 OK. All test cases passed!
 
 Testcase: 36 6834 5260 2040 4295
-OK. All test cases passed!
+Please check your code. 6834/6834 test cases failed!
 
 Testcase: 37 9180 8099 5366 7189
 OK. All test cases passed!
@@ -2121,7 +2121,7 @@ Testcase: 81 865 8042 2984 9266
 OK. All test cases passed!
 
 Testcase: 82 7710 8356 9317 2736
-OK. All test cases passed!
+Please check your code. 10/7710 test cases failed!
 
 Testcase: 83 7261 985 4558 8888
 OK. All test cases passed!
@@ -2133,7 +2133,7 @@ Testcase: 85 2161 790 4955 9498
 OK. All test cases passed!
 
 Testcase: 86 6728 3259 912 1040
-OK. All test cases passed!
+Please check your code. 6728/6728 test cases failed!
 
 Testcase: 87 3197 2802 8061 8925
 OK. All test cases passed!
