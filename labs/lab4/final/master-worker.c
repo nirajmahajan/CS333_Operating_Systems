@@ -32,20 +32,19 @@ void *generate_requests_loop(void *data)
 {
 	int thread_id = *((int *)data);
 	while(1){
-		pthread_mutex_lock(&bufferlock);
 		if(item_to_produce >= total_items) {
 			pthread_cond_broadcast(&cv_master_hurry);
-			pthread_mutex_unlock(&bufferlock);
 			break;
 		}
 
+		pthread_mutex_lock(&bufferlock);
 		while(curr_buf_size == max_buf_size) {
-			pthread_cond_wait(&cv_worker_hurry, &bufferlock);
 			if(item_to_produce >= total_items) {
 				pthread_cond_broadcast(&cv_master_hurry);
 				pthread_mutex_unlock(&bufferlock);
 				return 0;
 			}
+			pthread_cond_wait(&cv_worker_hurry, &bufferlock);
 		}
 
  		
@@ -53,7 +52,9 @@ void *generate_requests_loop(void *data)
 		print_produced(item_to_produce, thread_id);
 		item_to_produce++;
 
-		pthread_cond_signal(&cv_master_hurry);
+		if (curr_buf_size == 1){
+			pthread_cond_broadcast(&cv_master_hurry);
+		}
 		pthread_mutex_unlock(&bufferlock);
 	}
 	return 0;
@@ -63,26 +64,27 @@ void *generate_requests_loop(void *data)
 void *worker_employ(void * args){
 	int thread_id = *((int *)args);
 	while(1){
-		pthread_mutex_lock(&bufferlock);
 		if(item_to_produce >= total_items && curr_buf_size == 0) {
 			pthread_cond_broadcast(&cv_worker_hurry);
-			pthread_mutex_unlock(&bufferlock);
 			break;
 		}
 
+		pthread_mutex_lock(&bufferlock);
 		while(curr_buf_size == 0) {
-			pthread_cond_wait(&cv_master_hurry, &bufferlock);
 			if(item_to_produce >= total_items && curr_buf_size == 0) {
 				pthread_cond_broadcast(&cv_worker_hurry);
 				pthread_mutex_unlock(&bufferlock);
 				return 0;
 			}
+			pthread_cond_wait(&cv_master_hurry, &bufferlock);
 		}
 
 		int item_to_consume = buffer[curr_buf_size-1];
 		curr_buf_size--;
 		print_consumed(item_to_consume, thread_id);
-		pthread_cond_signal(&cv_worker_hurry);
+		if (curr_buf_size == max_buf_size-1){
+			pthread_cond_broadcast(&cv_worker_hurry);
+		}
 		pthread_mutex_unlock(&bufferlock);
 	}
 	return 0;
