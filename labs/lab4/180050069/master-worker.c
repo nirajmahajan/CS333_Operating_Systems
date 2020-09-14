@@ -130,7 +130,11 @@ int main(int argc, char *argv[])
 	}
 
 	for (i = 0; i < num_masters; i++){
-		pthread_create(&master_thread[i], NULL, generate_requests_loop, (void *)&master_thread_id[i]);
+		rc = pthread_create(&master_thread[i], NULL, generate_requests_loop, (void *)&master_thread_id[i]);
+		// if (rc != 0) {
+		// 	printf("Error in creating a master thread. (Perhaps thread limit reached).\n");
+		// }
+		// assert(rc == 0);
 	}
 	
 	//create worker consumer threads
@@ -140,7 +144,11 @@ int main(int argc, char *argv[])
 		worker_thread_id[i] = i;
 	}
 	for (i = 0; i < num_workers; i++){
-		pthread_create(&worker_thread[i], NULL, worker_employ, (void *)&worker_thread_id[i]);
+		rc = pthread_create(&worker_thread[i], NULL, worker_employ, (void *)&worker_thread_id[i]);
+		// if (rc != 0) {
+		// 	printf("Error in creating a worker thread. (Perhaps thread limit reached).\n");
+		// }
+		// assert(rc == 0);
 	}
 	
 	//wait for all threads to complete
