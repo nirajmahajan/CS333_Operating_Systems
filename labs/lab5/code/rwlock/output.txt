@@ -1,0 +1,440 @@
+
+Testcase: 1 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 1 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 2 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 3 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 4 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 5 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 6 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 7 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 8 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 9 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 1
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 2
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 3
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 4
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 5
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 6
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 7
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 8
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 9
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 10 10
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 63 70
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 41 39
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 91 100
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 93 73
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 98 70
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 78 55
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 93 81
+reader_pref : Reader should not wait to acquire lock
+writer_pref : PASSED
+
+Testcase: 100 33
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 60 47
+reader_pref : PASSED
+writer_pref : PASSED
+
+Testcase: 18 93
+reader_pref : PASSED
+writer_pref : PASSED
