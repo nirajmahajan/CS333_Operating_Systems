@@ -540,9 +540,17 @@ procdump(void)
 void
 ucv_sleep(int variable, int index)
 {
+  struct proc *p = myproc();
+  
+  if(p == 0)
+    panic("sleep");
+
+  if(uspinlock_holding(index) == 0)
+    panic("sleep without lk");
+
   acquire(&ptable.lock);
   uspinlock_release(index);
-  struct proc* p = myproc();
+  
   p->chan = (void *) variable;
   p->state = SLEEPING;
   sched();

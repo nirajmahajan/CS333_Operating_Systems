@@ -4,6 +4,7 @@
 #include "uspinlock.h"
 
 //TODO: define an array of NLOCK uspinlocks
+uint uspinlocksp[NLOCK];
 
 int
 uspinlock_init(void)
