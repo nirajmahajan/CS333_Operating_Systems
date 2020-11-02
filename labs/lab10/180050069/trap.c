@@ -14,9 +14,6 @@ extern uint vectors[];  // in vectors.S: array of 256 entry pointers
 struct spinlock tickslock;
 uint ticks;
 
-int
-mappages(pde_t *, void *, uint, uint, int);
-
 void
 tvinit(void)
 {
@@ -88,35 +85,11 @@ trap(struct trapframe *tf)
     if (tf->trapno == T_PGFLT){
       pde_t *pgdir = myproc()->pgdir;
       uint oldsz = PGROUNDDOWN(rcr2());
-      uint newsz = PGROUNDDOWN(rcr2()) + myproc()->sz;
-      
-      char *mem;
-      uint a;
-
-      if(newsz >= KERNBASE)
-        return;
-      if(newsz < oldsz)
-        return;
-
-      a = PGROUNDUP(oldsz);
-      for(; a < newsz; a += PGSIZE){
-        mem = kalloc();
-        if(mem == 0){
-          cprintf("allocuvm out of memory\n");
-          deallocuvm(pgdir, newsz, oldsz);
-          return;
-        }
-        memset(mem, 0, PGSIZE);
-        if(mappages(pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U) < 0){
-          cprintf("allocuvm out of memory (2)\n");
-          deallocuvm(pgdir, newsz, oldsz);
-          kfree(mem);
-          return;
-        }
-      }
-      switchuvm(myproc());
+      uint newsz = myproc()->sz;
+      allocuvm(pgdir, oldsz, newsz);
       return;
-    }
+  }
+      
     if(myproc() == 0 || (tf->cs&3) == 0){
       // In kernel, it must be our mistake.
       cprintf("unexpected trap %d from cpu %d eip %x (cr2=0x%x)\n",
