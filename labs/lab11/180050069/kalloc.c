@@ -123,11 +123,19 @@ int get_numFreePages(void){
 }
 
 void increment_RC(uint pa){
+  if(kmem.use_lock)
+    acquire(&kmem.lock);
   reference_counts[pa/PGSIZE] += 1;
+  if(kmem.use_lock)
+    release(&kmem.lock);
 }
 
 void decrement_RC(uint pa){
+  if(kmem.use_lock)
+    acquire(&kmem.lock);
   reference_counts[pa/PGSIZE] -= 1;
+  if(kmem.use_lock)
+    release(&kmem.lock);
 }
 
 int get_RC(uint pa){
